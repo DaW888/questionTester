@@ -1,0 +1,110 @@
+:root {
+    --bcColor: #17191e;
+    --textColor: #f7fff7;
+    --mainColor: #db5461;
+    --accDark: #292b37;
+    --accLight: #408ad4;
+    --green: rgb(27, 255, 145);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bcColor);
+}
+
+.cont {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textColor);
+    background-color: var(--accDark);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vw;
+    border-radius: 10px;
+}
+
+.quest {
+    margin: 6px;
+    padding: 4px;
+    color: var(--accLight);
+    width: 100%;
+    text-align: center;
+
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(90deg, rgba(219,84,97,1) 0%, rgba(125,87,232,1) 51%, rgba(37,146,255,1) 100%);
+    border-image-slice: 1;
+}
+
+.answers {
+    padding: 5px 2px 5px 2px;
+    width: 100%;
+    margin: 6px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right {
+    padding: 5px 2px 5px 2px;
+    width: 100%;
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right .good {
+    color: var(--green);
+}
+
+.right .your {
+    color: var(--mainColor);
+}
+
+label {
+    padding: 5px;
+    cursor: pointer;
+}
+
+input[type='radio']:checked + span {
+    color: var(--mainColor);
+}
+
+input[type='submit'] {
+    margin: 10px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-size: 1.4em;
+    border: 2px solid var(--accDark);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+table {
+    color: var(--textColor);
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    text-align: left;
+}
+
+tr {
+    border-bottom: 2px solid red;
+    /* border-image-source: linear-gradient(90deg, rgba(219,84,97,1) 0%, rgba(125,87,232,1) 51%, rgba(37,146,255,1) 100%); */
+    /* border-image-slice: 1; */
+}
