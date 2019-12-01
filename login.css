@@ -1,0 +1,56 @@
+:root {
+    --bcColor: #17191e;
+    --textColor: #f7fff7;
+    --mainColor: #db5461;
+    --accDark: #292b37;
+    --accLight: #408ad4;
+    --green: #1bff91;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bcColor);
+    display: flex;
+    justify-content: center;
+}
+
+.cont {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type='text'], input[type='password'] {
+    text-align: center;
+    color: var(--textColor);
+    background-color: var(--accDark);
+    min-width: 40vw;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid var(--accLight);
+    border-radius: 10px;
+    font-size: 1.1em;
+    min-height: 5vh;
+
+
+}
+
+input[type='submit'] {
+    font-family: 'Open Sans', sans-serif;
+    width: 20vw;
+    margin: 2vh;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-size: 1.3em;
+    border: 2px solid var(--accDark);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
