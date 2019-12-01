@@ -6,19 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Dawid Wajda">
     <meta name="description" content="3ic2">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+
     <title>Strona</title>
-        
 </head>
-<body>
-</body>
-</html>
-
-<?php 
-//logowanie
-//rejestracja
-//bledny login
-?>
-
 
 <?php
 session_start();
@@ -29,11 +23,6 @@ if (!empty($_POST)) {
 
         $name = $_POST['name'];
         $pass = $_POST['pass'];
-
-        echo $name.' ';
-        echo $pass;
-        echo '<br>';
-
 
         $conn = @new mysqli($dbHost, $dbUser, $dbPass, $dbName);
         if($conn -> connect_errno) die ('brak polaczenia');
@@ -49,9 +38,12 @@ if (!empty($_POST)) {
         } else {
             $rs = $conn -> query("SELECT * FROM users WHERE name = '$name'");
             if ($rs -> num_rows > 0) {
-                echo 'bledne haslo';
-                echo '<br>';
-                echo '<a href="./login.php">Spróbuj jeszcze raz</a>';
+                echo '
+                    <div class="cont">
+                        <p class="wrongPass">Błędne Hasło</p>
+                        <a href="./login.php">Spróbuj jeszcze raz</a>
+                    </div>
+                ';
 
             } else {
                 echo 'tworze konto';
@@ -65,18 +57,15 @@ if (!empty($_POST)) {
 
         }
 
-        // $stmt = $con->prepare("SELECT * FROM users WHERE username = ?");
-        // $stmt->bind_param('s', $_POST['username']);
-        // $stmt->execute();
-        // $result = $stmt->get_result();
-        // $user = $result->fetch_object();
-
-        // Verify user password and set $_SESSION
-        // if ( password_verify( $_POST['password'], $user->password ) ) {
-        // $_SESSION['user_id'] = $user->ID;
-        // }
     }
 }
 
 ?>
+
+<body>
+</body>
+</html>
+
+
+
 

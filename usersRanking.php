@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<a href="./index.php">Ranking Userow</a>
+<a href="./index.php">Strona Główna</a>
 
     <?php
         session_start();

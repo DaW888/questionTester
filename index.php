@@ -35,16 +35,18 @@ if (isset($_GET['logout'])) {
 
 <body>
 
-    <a href="index.php?logout=true">LOGOUT</a>
+    <a href="index.php?logout=true" id="logout">LOGOUT</a>
     <br>
 
     <?php
     if ($admin) {
         ?>
-        <a href="./questions.php">Panel Pytań</a> <br>
-        <a href="./users.php">Panel Użytkowników</a> <br>
-        <a href="./questionsRanking.php">Ranking Pytań</a> <br>
-        <a href="./usersRanking.php">Ranking Użytkowników</a> <br>
+        <div class="cont">
+            <a href="./questions.php">Panel Pytań</a> <br>
+            <a href="./users.php">Panel Użytkowników</a> <br>
+            <a href="./questionsRanking.php">Ranking Pytań</a> <br>
+            <a href="./usersRanking.php">Ranking Użytkowników</a> <br>
+        </div>
 
     <?php
     } else {

@@ -44,7 +44,7 @@ th {
 
 td {
     text-align: center;
-    padding: 2px;
+    padding: 4px;
 }
 
 .my {
@@ -57,4 +57,16 @@ h2 {
     font-size: 2em;
     margin-top: 10vh;
 
+}
+
+
+input[type='submit'] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-size: 16px;
+    border: 2px solid var(--accDark);
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: pointer;
 }
