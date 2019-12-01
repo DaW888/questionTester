@@ -16,7 +16,7 @@
         <form action="" method="POST" class="cont">
             <div class="box">
                 <div class="quest">
-                    Pytanie nr1
+                    <textarea name="pyt" cols="30" rows="5"></textarea>
                 </div>
                 <div class="answers">
                     <label><input type="radio" name="czesc" hidden checked /> <span>odp1</span></label>
@@ -28,13 +28,16 @@
 
             <div class="box">
                 <div class="quest">
-                    Pytanie nr1
+                        <textarea name="pyt" cols="30" rows="4"></textarea>
                 </div>
                 <div class="answers">
-                    <label><input type="radio" name="czesc3" hidden /> <span>odp1</span></label>
-                    <label><input type="radio" name="czesc3" hidden /> <span>odp2</span></label>
-                    <label><input type="radio" name="czesc3" hidden /> <span>odp3</span></label>
-                    <label><input type="radio" name="czesc3" hidden /> <span>odp4</span></label>
+                    <label><input type="radio" name="czesc3" /> <input type="text" name="odp"></label>
+                    <label><input type="radio" name="czesc3" /> <input type="text" name="odp"></label>
+                    <label><input type="radio" name="czesc3" /> <input type="text" name="odp"></label>
+                    <label><input type="radio" name="czesc3" /> <input type="text" name="odp"></label>
+                </div>
+                <div class="bt">
+                    <input type="submit" value="Aktualizuj" name="update">
                 </div>
             </div>
 
@@ -69,4 +72,3 @@
 
     </body>
 </html>
-

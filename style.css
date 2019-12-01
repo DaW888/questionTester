@@ -77,11 +77,28 @@ body {
 }
 
 label {
+    width: 100%;
     padding: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+label > input[type='text'] {
+    background-color: transparent;
+    color: var(--textColor);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid var(--mainColor);
+    text-align: center;
 }
 
 input[type='radio']:checked + span {
+    color: var(--mainColor);
+}
+input[type='radio']:checked + input {
     color: var(--mainColor);
 }
 
@@ -101,6 +118,20 @@ input[type='submit'] {
     position: absolute;
     left: 10px;
     top: 10px;
+    text-decoration: none;
+    color: var(--accLight);
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#mainSite {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-decoration: none;
+    color: var(--accLight);
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .cont a {
@@ -126,4 +157,37 @@ input[type='submit'] {
     font-size: 5vw;
     font-family: 'Open Sans', sans-serif;
     margin: 4vh;
+}
+
+textarea {
+    background-color: transparent;
+    color: var(--textColor);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    width: 96%;
+    border: none;
+}
+.bt > input {
+    font-size: 18px;
+    width: 80%;
+    padding: 6px;
+    background-color: var(--accLight);
+}
+.bt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btAdd {
+    margin: 10px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-size: 1.4em;
+    border: 2px solid var(--accDark);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    margin-bottom: 6vh;
 }

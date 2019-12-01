@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+$admin = false;
+
+if (isset($_SESSION['name'])) {
+    if ($_SESSION['name'] == 'admin') {
+        $admin = true;
+    }
+} else {
+    header("Location: http://localhost/projektTester/login.php");
+}
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: http://localhost/projektTester/index.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -13,12 +33,10 @@
 </head>
 
 <body>
-    <a href="index.php?logout=true">LOGOUT</a>
-    <a href="./usersRanking.php">Ranking Userow</a>
+    <a href="index.php?logout=true" id="logout">LOGOUT</a>
 
     <?php
     include 'settings.php';
-    session_start();
 
     $name = $_SESSION['name'];
 
@@ -63,6 +81,7 @@
         ';
         }
     }
+    echo '<a href="./usersRanking.php">Ranking Userow</a>';
     echo '</div>';
 
     ?>

@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<a href="./index.php">Strona Główna</a>
+<a href="./index.php" id="mainSite">Strona Główna</a>
 
     <?php
         session_start();
