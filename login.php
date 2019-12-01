@@ -16,8 +16,8 @@
 
 <body>
     <form action="./checkLogin.php" method="post" class="cont">
-        <input type="text" name="name" placeholder="Podaj nazwe użytkownika" minlength="3" required>
-        <input type="password" name="pass" placeholder="Podaj hasło" minlength="6" required>
+        <input type="text" name="name" placeholder="Podaj nazwe użytkownika" minlength="3" maxlength="30" required>
+        <input type="password" name="pass" placeholder="Podaj hasło" minlength="6" maxlength="32" required>
         <input type="submit" value="Zaloguj">
     </form>
 </body>

@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+$admin = false;
+
+if (isset($_SESSION['name'])) {
+    if ($_SESSION['name'] == 'admin') {
+        $admin = true;
+    } else {
+        header("Location: http://localhost/projektTester");
+    }
+} else {
+    header("Location: http://localhost/projektTester/login.php");
+}
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: http://localhost/projektTester/index.php");
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -16,7 +40,6 @@
 <a href="./index.php" id="mainSite">Strona Główna</a>
 
     <?php
-        session_start();
         include 'settings.php';
 
         $conn = @new mysqli($dbHost, $dbUser, $dbPass, $dbName);

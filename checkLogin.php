@@ -22,7 +22,7 @@ if (!empty($_POST)) {
         include 'settings.php';
 
         $name = $_POST['name'];
-        $pass = $_POST['pass'];
+        $pass = md5($_POST['pass']);
 
         $conn = @new mysqli($dbHost, $dbUser, $dbPass, $dbName);
         if($conn -> connect_errno) die ('brak polaczenia');
