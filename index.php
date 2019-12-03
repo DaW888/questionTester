@@ -68,7 +68,7 @@ if (isset($_GET['logout'])) {
                         </div>
                         
                         <div class="answers">
-                            <label><input type="radio" name="'.$rec['id'].'" value="a" hidden checked /> <span>'.$rec['a'].'</span></label>
+                            <label><input type="radio" name="'.$rec['id'].'" value="a" hidden required /> <span>'.$rec['a'].'</span></label>
                             <label><input type="radio" name="'.$rec['id'].'" value="b" hidden /> <span>'.$rec['b'].'</span></label>
                             <label><input type="radio" name="'.$rec['id'].'" value="c" hidden /> <span>'.$rec['c'].'</span></label>
                             <label><input type="radio" name="'.$rec['id'].'" value="d" hidden /> <span>'.$rec['d'].'</span></label>

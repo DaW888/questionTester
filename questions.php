@@ -47,7 +47,7 @@ if (isset($_GET['logout'])) {
                         <textarea name="question" cols="30" rows="4" required></textarea>
                     </div>
                     <div class="answers">
-                        <label><input type="radio" name="good" value="a" checked /> <input type="text" name="a"  required></label>
+                        <label><input type="radio" name="good" value="a" required /> <input type="text" name="a"  required></label>
                         <label><input type="radio" name="good" value="b" /> <input type="text" name="b"  required></label>
                         <label><input type="radio" name="good" value="c" /> <input type="text" name="c"  required></label>
                         <label><input type="radio" name="good" value="d" /> <input type="text" name="d"  required></label>
